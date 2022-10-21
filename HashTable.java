@@ -52,6 +52,7 @@ public class HashTable {
         for(int i=0; i < HASH_TABLE_SIZE; i++)
             if(table[i] != null && table[i].value == value)
                 table[i] = null;
+        System.out.println();
         size--;
     }
     private int myHash1(int value) {
@@ -63,6 +64,7 @@ public class HashTable {
         return key;
     }
     public void printHashTable() {
+        System.out.println();
         System.out.println("Hash Table: ");
         for(int i=0; i < HASH_TABLE_SIZE; i++)
             if(table[i] != null)
