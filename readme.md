@@ -1,6 +1,6 @@
 # <div align="center">**Project 2**</div>
 ## **Overview**
-The double hashing algorithm was implemented using two helper classes: *HashTable* and *HashEntry. The class *HashEntry.java* creates a *HashEntry* object, which contains a value and its key (or index). The class *HashTable* creates the hash table. This class contains an insert, remove, and print method. The insert method utilizes a *getKey()* method that determines the key based on the hash functions and *i*, where *i* is initially set to zero. The *getKey()* method prints out *i* and the key until a valid key is found.
+The double hashing algorithm was implemented using two helper classes: *HashTable* and *HashEntry*. The class *HashEntry* creates a *HashEntry* object, which contains a value and its key (or index). The class *HashTable* creates the hash table. This class contains an insert, remove, and print method. The insert method utilizes a *getKey()* method that determines the key based on the hash functions and *i*, where *i* is initially set to zero. The *getKey()* method prints out *i* and the key until a valid key is found.
 
 The class *Double_Hashing.java* was used to test the *HashTable* and *HashEntry* classes. It declares a *HashTable* with size = 16. It then allows the user to insert or remove a value into or from the hash table until the while loop ends. Finally, the hash table is printed, displaying each element in the table along with its key.
 ## **Running the File**
