@@ -25,8 +25,11 @@ public class HashTable {
         int key = 0;
         for(int i=0; i < HASH_TABLE_SIZE; i++) {
             key = (hash1 + (i * hash2)) % HASH_TABLE_SIZE;
-            if(table[key] == null)
+            System.out.println("i: " + i + ", key: " + key);
+            if(table[key] == null) {
+                System.out.println();
                 return key;
+            }
         }
         return key;
     }
@@ -35,6 +38,7 @@ public class HashTable {
             System.out.println("Table is full!");
             return;
         }
+        System.out.println("Inserting " + value);
         int key = getKey(value);
         table[key] = new HashEntry(key, value);
         size++;
@@ -44,8 +48,10 @@ public class HashTable {
             System.out.println("Table is empty!");
             return;
         }
-        int key = getKey(value);
-        table[key] = null;
+        System.out.println("Removing " + value);
+        for(int i=0; i < HASH_TABLE_SIZE; i++)
+            if(table[i] != null && table[i].value == value)
+                table[i] = null;
         size--;
     }
     private int myHash1(int value) {
